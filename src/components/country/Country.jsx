@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({country}) => {
+const Country = ({country,handleVisitedCountries,handleVisitedFlag}) => {
     const[visited,setVisited]=useState(false);
     // console.log(country.area.area);
-
+    // console.log(handleVisitedCountries);
     const handleVisited = () => {
         //Using if else toggle
         /* if(visited){
@@ -18,6 +18,7 @@ const Country = ({country}) => {
 
         //Using bang sign toggle
         setVisited(!visited)
+        handleVisitedCountries(country);
     }
 
     return (
@@ -31,6 +32,7 @@ const Country = ({country}) => {
             <p>Population:{country.population.population} </p>
             <p>Area: {country.area.area} & It is a {country.area.area> 2040 ? 'Big Country':"Small Country"}</p>
             <button onClick={handleVisited}>{visited? 'Visited':'Not Visited'}</button>
+            <button onClick={() => handleVisitedFlag(country.flags.flags.png)}>Add Visited Flag</button>
         </div>
     );
 };
