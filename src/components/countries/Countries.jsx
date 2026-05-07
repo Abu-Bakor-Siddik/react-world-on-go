@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import  { use, useState } from 'react';
 import Country from '../country/Country';
 import './Countries.css'
 
@@ -23,7 +23,7 @@ const Countries = ({countriesPromise}) => {
 
     return (
         <div >
-            <h1>In the Countries: {countries.length}</h1>
+            <h1>Total Country I will Visit soon: {countries.length}</h1>
             <h3>Total Country Visited:{visitedCountries.length}</h3>
             <h3>Total Flags Visited:{visitedFlags.length}</h3>
             <ol>
